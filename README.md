@@ -13,5 +13,7 @@ Heapification is done through bottom up order.
 
 GROUP MEMBERS:
 Faisal Memon        (17B-015-CS)
+
 Imran riaz Chohan   (17B-043-CS)
+
 Hassan Siddiqui     (17B-037-CS)
