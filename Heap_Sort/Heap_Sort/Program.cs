@@ -21,21 +21,17 @@ namespace Heap_Sort
             heap_sort hs1 = new heap_sort();
             hs1.heapsort(array1);
             hs1.print(array1);
-
-
-
-
         }
     }
 
     class heap_sort
     {
-
+        /* This method calls build_heap() method which calls heapify() method and creates a max-heap */
+            
         public void heapsort(int[] arr)
         {
             int n = arr.Length;
             build_heap(arr);
-
 
             for (int i = n - 1; i >= 0; i--)
             {
@@ -45,15 +41,16 @@ namespace Heap_Sort
                 heapify(arr, i, 0);
             }
         }
+       /* It gives arr.lenth/2th till 0th element to heapfiy which creates a max heap */
         public void build_heap(int[] arr1)
         {
             int heap_size = arr1.Length;
             for (int i = (heap_size / 2) - 1; i >= 0; i--)
             {
                 heapify(arr1, heap_size, i);
-
             }
         }
+        /* This method creates a max heap and checks for other heap property*/ 
         public void heapify(int[] arr, int n, int i)
         {
             int largest = i;
@@ -76,10 +73,9 @@ namespace Heap_Sort
                 arr[i] = arr[largest];
                 arr[largest] = swap;
                 heapify(arr, n, largest);
-
             }
-
         }
+        /* This method prints the sorted array*/
         public void print(int[] array)
         {
             int n = array.Length;
@@ -88,6 +84,5 @@ namespace Heap_Sort
                 Console.WriteLine("{0} ", array[i]);
             }
         }
-
     }
 }
